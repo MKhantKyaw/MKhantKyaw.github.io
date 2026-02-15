@@ -1,0 +1,232 @@
+{
+  "personal": {
+    "name": "Min Khant Kyaw",
+    "title": "Full Stack Developer",
+    "tagline": "Building intelligent, scalable products with AI and modern web technologies",
+    "bio": "Full Stack Developer with 3+ years of experience in React.js, TypeScript, and Node.js, focusing on usability, system performance, and scalable architectures. Experienced in building AI-powered products, end-to-end user flows, and cloud-based systems. Passionate about intelligent systems, product engineering, and real-world user impact.",
+    "email": "mkhantkyaw61@gmail.com",
+    "location": "London, UK",
+    "socials": {
+      "github": "https://github.com/MKhantKyaw",
+      "linkedin": "https://www.linkedin.com/in/min-khant-kyaw-b9323b196/"
+    },
+    "resumeUrl": "/resume.pdf"
+  },
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Redux",
+        "React Query",
+        "Zustand",
+        "Tailwind CSS",
+        "HTML/CSS"
+      ]
+    },
+    {
+      "category": "Backend",
+      "items": [
+        "Node.js",
+        "Express",
+        "REST APIs",
+        "Authentication (JWT, OAuth)",
+        "API rate limiting"
+      ]
+    },
+    {
+      "category": "Database",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Prisma",
+        "TypeORM"
+      ]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "items": [
+        "AWS",
+        "Firebase",
+        "Azure",
+        "Docker (basic)",
+        "CI/CD",
+        "GitHub Actions"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "StorySpark",
+      "description": "AI-powered personalized storybook platform with an interactive editor, checkout system, and content-generation pipelines.",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "TypeORM",
+        "Stripe",
+        "AWS",
+        "LLMs"
+      ],
+      "image": "",
+      "github": "",
+      "live": "https://storyspark.ai",
+      "featured": true
+    },
+    {
+      "title": "Recipe Stories",
+      "description": "AI-powered cookbook creation platform with drag-and-drop editor, PDF export, and print ordering.",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Stripe",
+        "AWS"
+      ],
+      "image": "",
+      "github": "",
+      "live": "https://recipestories.co",
+      "featured": true
+    },
+    {
+      "title": "Gamified Job Seeking Application",
+      "description": "Full-stack web application designed to improve job-seeking motivation using gamification principles and Octalysis analysis.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ],
+      "image": "",
+      "github": "https://github.com/MKhantKyaw/MDX-Final-Project",
+      "live": "",
+      "featured": true
+    },
+    {
+      "title": "Pharmacy POS System",
+      "description": "Web-based point-of-sale system with sales tracking, receipt generation, and inventory management.",
+      "tech": [
+        "Laravel",
+        "MySQL"
+      ],
+      "image": "",
+      "github": "",
+      "live": "",
+      "featured": false
+    },
+    {
+      "title": "Inventory Management System",
+      "description": "Web application replacing spreadsheet workflows with stock tracking, reporting dashboards, and role-based access.",
+      "tech": [
+        "React",
+        "Node.js"
+      ],
+      "image": "",
+      "github": "",
+      "live": "",
+      "featured": false
+    }
+  ],
+  "experience": [
+    {
+      "role": "Software Engineer",
+      "company": "StorySpark AI",
+      "period": "Jan 2025 — Present",
+      "description": "Leading full-stack development of AI-powered storytelling and cookbook products, building end-to-end user flows, integrating LLM and image-generation pipelines, and managing scalable backend services and cloud infrastructure.",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "TypeORM",
+        "Stripe",
+        "AWS"
+      ]
+    },
+    {
+      "role": "Web Developer",
+      "company": "Freelance",
+      "period": "Aug 2020 — Oct 2022",
+      "description": "Developed responsive web applications and internal systems including POS and inventory platforms using modern web technologies.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "PHP",
+        "Laravel",
+        "REST APIs",
+        "MySQL"
+      ]
+    },
+    {
+      "role": "Software Engineer Intern",
+      "company": "Japan Advanced Institute of Science and Technology",
+      "period": "Oct 2019 — Dec 2019",
+      "description": "Optimized a Java-based Sudoku solver using SAT algorithms, improving memory usage and runtime performance.",
+      "tech": [
+        "Java",
+        "Algorithms",
+        "SAT Solver"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BSc (Hons) Information Technology",
+      "school": "Middlesex University",
+      "period": "2023 — 2024",
+      "details": "First Class Honours"
+    },
+    {
+      "degree": "Level 5 Diploma in Computing",
+      "school": "NCC Education",
+      "period": "2022 — 2023",
+      "details": "Graduated with Distinctions"
+    }
+  ],
+  "news": [
+  {
+    "date": "2nd Jan 2026",
+    "event": "Launched Recipe Stories, an AI-powered cookbook creation platform with drag-and-drop editor and print export."
+  },
+  {
+    "date": "1st Jan 2025",
+    "event": "Joined StorySpark AI in London as a Software Engineer, leading full-stack development of AI storytelling products."
+  },
+  {
+    "date": "30th May 2024",
+    "event": "Graduated with First Class Honours in Information Technology from Middlesex University, London."
+  },
+  {
+    "date": "20th Sep 2023",
+    "event": "Started my BSc (Hons) Information Technology in Middlesex University, London."
+  },
+  {
+    "date": "19th Sep 2023",
+    "event": "Moved to London, UK."
+  },
+  {
+    "date": "31st Jul 2023",
+    "event": "Completed NCC Level 5 Diploma in Computing with distinctions."
+  },
+  {
+    "date": "30th Nov 2020",
+    "event": "My conference paper got accepted in International Conference on Advanced Information Technologies, 2020."
+  },
+  {
+    "date": "1st Aug 2020",
+    "event": "Started working as a freelance web developer with 2 of my friends."
+  },
+  {
+    "date": "22nd Dec 2019",
+    "event": "Finished my Software Engineering Internship in Japan Advanced Institute of Science and Technology."
+  }
+
+]
+
+}
