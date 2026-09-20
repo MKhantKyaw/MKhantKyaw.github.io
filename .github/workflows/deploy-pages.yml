@@ -29,13 +29,26 @@ jobs:
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Resolve deployment base path
+        id: site
+        env:
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          repository_name="${GITHUB_REPOSITORY##*/}"
+          if [[ "${repository_name,,}" == "${GITHUB_REPOSITORY_OWNER,,}.github.io" ]]; then
+            echo "base_path=" >> "$GITHUB_OUTPUT"
+          else
+            echo "base_path=$PAGES_BASE_PATH" >> "$GITHUB_OUTPUT"
+          fi
       - name: Install dependencies
         run: npm ci
       - name: Build static site
-        run: npm run build -- --webpack
+        run: |
+          npm run build -- --webpack
+          node scripts/verify-static-export.mjs
         env:
           GITHUB_PAGES: "true"
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.site.outputs.base_path }}
       - name: Upload site
         uses: actions/upload-pages-artifact@v4
         with:
