@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/FadeIn";
 import { Separator } from "@/components/ui/separator";
 import data from "@/data/data.json";
+import { publicPath } from "@/lib/public-path";
 
 export function Contact() {
   const { personal } = data;
@@ -30,7 +31,7 @@ export function Contact() {
             </Button>
             {personal.resumeUrl && (
               <Button variant="outline" size="sm" asChild>
-                <a href={personal.resumeUrl} download="Min-Khant-Kyaw-CV.pdf">
+                <a href={publicPath(personal.resumeUrl)} download="Min-Khant-Kyaw-CV.pdf">
                   <Download data-icon="inline-start" aria-hidden="true" />
                   Download CV
                 </a>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Download, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import data from "@/data/data.json";
+import { publicPath } from "@/lib/public-path";
 
 const profileLinkClassName =
   "inline-flex h-8.5 shrink-0 items-center justify-center gap-2 rounded-sm border border-foreground/15 bg-background text-xs font-medium text-muted-foreground transition-all duration-150 hover:-translate-y-px hover:border-foreground hover:bg-foreground hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-0 motion-reduce:transform-none motion-reduce:transition-none";
@@ -15,7 +16,7 @@ export function Hero() {
         <FadeIn>
           <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
             <Image
-              src="/images/photo.jpg"
+              src={publicPath("/images/photo.jpg")}
               alt={personal.name}
               width={96}
               height={96}
@@ -72,7 +73,7 @@ export function Hero() {
                 )}
                 {personal.resumeUrl && (
                   <a
-                    href={personal.resumeUrl}
+                    href={publicPath(personal.resumeUrl)}
                     download="Min-Khant-Kyaw-CV.pdf"
                     aria-label="Download CV"
                     title="Download CV"
