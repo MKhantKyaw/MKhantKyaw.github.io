@@ -152,6 +152,7 @@
     {
       "role": "Software Engineer",
       "company": "StorySpark AI",
+      "location": "London, UK · Hybrid / Remote",
       "period": "Jan 2025 — Present",
       "description": "Leading full-stack development of AI-powered storytelling and cookbook products, building end-to-end user flows, optimising system performance, integrating LLM and image-generation pipelines, and managing scalable backend services and cloud infrastructure.",
       "tech": [
@@ -168,6 +169,7 @@
     {
       "role": "Web Developer",
       "company": "Freelance",
+      "location": "Yangon, Myanmar",
       "period": "Aug 2020 — Oct 2022",
       "description": "Developed responsive web applications and internal systems including POS and inventory platforms using modern web technologies.",
       "tech": [
@@ -182,6 +184,7 @@
     {
       "role": "Software Engineer Intern",
       "company": "Japan Advanced Institute of Science and Technology",
+      "location": "Nomi, Ishikawa, Japan",
       "period": "Oct 2019 — Dec 2019",
       "description": "Optimised a Java-based Sudoku solver using SAT algorithms, improving memory usage and runtime performance.",
       "tech": [

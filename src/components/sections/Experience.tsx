@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { FadeIn } from "@/components/FadeIn";
 import { Separator } from "@/components/ui/separator";
 import { getTechColor } from "@/lib/tech-colors";
+import { MapPin } from "lucide-react";
 import data from "@/data/data.json";
 
 export function Experience() {
@@ -25,6 +26,12 @@ export function Experience() {
                       {exp.role}
                     </h3>
                     <p className="text-sm text-muted-foreground">{exp.company}</p>
+                    {exp.location && (
+                      <p className="mt-1 flex items-center gap-1 text-xs text-muted-foreground">
+                        <MapPin className="size-3 shrink-0" aria-hidden="true" />
+                        {exp.location}
+                      </p>
+                    )}
                   </div>
                   <span className="text-xs text-muted-foreground shrink-0">
                     {exp.period}
