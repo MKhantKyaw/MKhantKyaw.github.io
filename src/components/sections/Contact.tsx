@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Download, Mail, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/FadeIn";
 import { Separator } from "@/components/ui/separator";
@@ -18,16 +18,24 @@ export function Contact() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <p className="text-sm text-foreground/80">
+          <p className="text-sm text-body-foreground">
             Interested in working together? Feel free to reach out.
           </p>
-          <div className="mt-4">
+          <div className="mt-4 flex flex-wrap items-center gap-3">
             <Button size="sm" asChild>
               <a href={`mailto:${personal.email}`}>
                 <Mail className="mr-2 h-3.5 w-3.5" />
                 {personal.email}
               </a>
             </Button>
+            {personal.resumeUrl && (
+              <Button variant="outline" size="sm" asChild>
+                <a href={personal.resumeUrl} download="Min-Khant-Kyaw-CV.pdf">
+                  <Download data-icon="inline-start" aria-hidden="true" />
+                  Download CV
+                </a>
+              </Button>
+            )}
           </div>
         </FadeIn>
 

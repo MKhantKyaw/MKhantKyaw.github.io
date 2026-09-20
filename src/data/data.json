@@ -1,17 +1,32 @@
 {
   "personal": {
     "name": "Min Khant Kyaw",
-    "title": "Full Stack Developer",
+    "title": "Software Engineer | AI Enthusiast",
     "tagline": "Building intelligent, scalable products with AI and modern web technologies",
-    "bio": "Full Stack Developer with 3+ years of experience in React.js, TypeScript, and Node.js, focusing on usability, system performance, and scalable architectures. Experienced in building AI-powered products, end-to-end user flows, and cloud-based systems. Passionate about intelligent systems, product engineering, and real-world user impact.",
+    "bio": "Software Engineer with 4+ years of experience in React.js, TypeScript, and Node.js, focusing on usability, system performance, and scalable architectures. Experienced in building AI-powered products, end-to-end user flows, and cloud-based systems. Passionate about intelligent systems, product engineering, and real-world user impact.",
     "email": "mkhantkyaw61@gmail.com",
-    "location": "London, UK",
+    "location": "Ireland",
     "socials": {
       "github": "https://github.com/MKhantKyaw",
       "linkedin": "https://www.linkedin.com/in/min-khant-kyaw-b9323b196/"
     },
-    "resumeUrl": "/resume.pdf"
+    "resumeUrl": "/file/resume.pdf"
   },
+  "publications": [
+    {
+      "title": "Understanding Non-native English Speakers' Perceptions of Voice User Interfaces with and without a Visual Display: A Usability Study",
+      "venue": "International Conference on Advanced Information Technologies (ICAIT, 2020)",
+      "description": "A usability study with 34 non-native English speakers comparing voice interfaces with and without a visual display, exploring usability and user preferences.",
+      "url": "https://www.researchgate.net/publication/370899945_Understanding_Non-native_English_Speakers'_Perceptions_of_Voice_User_Interfaces_with_and_without_a_Visual_Display_A_Usability_Study"
+    }
+  ],
+  "hobbies": [
+    { "name": "Watching movies" },
+    { "name": "Playing video games" },
+    { "name": "Sightseeing" },
+    { "name": "Football" },
+    { "name": "Travelling" }
+  ],
   "skills": [
     {
       "category": "Frontend",
@@ -61,7 +76,7 @@
   "projects": [
     {
       "title": "StorySpark",
-      "description": "AI-powered personalized storybook platform with an interactive editor, checkout system, and content-generation pipelines.",
+      "description": "AI-powered personalized book creation platform with an interactive editor, LLM integration, checkout system, and cloud infrastructure.",
       "tech": [
         "Next.js",
         "TypeScript",
@@ -138,7 +153,7 @@
       "role": "Software Engineer",
       "company": "StorySpark AI",
       "period": "Jan 2025 — Present",
-      "description": "Leading full-stack development of AI-powered storytelling and cookbook products, building end-to-end user flows, integrating LLM and image-generation pipelines, and managing scalable backend services and cloud infrastructure.",
+      "description": "Leading full-stack development of AI-powered storytelling and cookbook products, building end-to-end user flows, optimising system performance, integrating LLM and image-generation pipelines, and managing scalable backend services and cloud infrastructure.",
       "tech": [
         "Next.js",
         "TypeScript",
@@ -146,7 +161,8 @@
         "PostgreSQL",
         "TypeORM",
         "Stripe",
-        "AWS"
+        "AWS",
+        "LLMs"
       ]
     },
     {
@@ -167,7 +183,7 @@
       "role": "Software Engineer Intern",
       "company": "Japan Advanced Institute of Science and Technology",
       "period": "Oct 2019 — Dec 2019",
-      "description": "Optimized a Java-based Sudoku solver using SAT algorithms, improving memory usage and runtime performance.",
+      "description": "Optimised a Java-based Sudoku solver using SAT algorithms, improving memory usage and runtime performance.",
       "tech": [
         "Java",
         "Algorithms",
@@ -176,6 +192,12 @@
     }
   ],
   "education": [
+    {
+      "degree": "MSc Computer Science - Artificial Intelligence",
+      "school": "University of Galway",
+      "period": "2026 — 2027",
+      "details": ""
+    },
     {
       "degree": "BSc (Hons) Information Technology",
       "school": "Middlesex University",
@@ -190,6 +212,14 @@
     }
   ],
   "news": [
+  {
+    "date": "7th Sep 2026",
+    "event": "Started my MSc in Computer Science (Artificial Intelligence) at the University of Galway, Ireland."
+  },
+  {
+    "date": "31st Aug 2026",
+    "event": "Moved to Galway, Ireland."
+  },
   {
     "date": "2nd Jan 2026",
     "event": "Launched Recipe Stories, an AI-powered cookbook creation platform with drag-and-drop editor and print export."
@@ -226,7 +256,6 @@
     "date": "22nd Dec 2019",
     "event": "Finished my Software Engineering Internship in Japan Advanced Institute of Science and Technology."
   }
-
 ]
 
 }

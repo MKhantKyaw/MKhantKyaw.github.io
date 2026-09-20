@@ -1,24 +1,26 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
-  { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
   { label: "News", href: "#news" },
   { label: "Contact", href: "#contact" },
 ];
 
 export function Navbar() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -30,7 +32,7 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || mobileOpen
           ? "bg-background/80 backdrop-blur-md border-b border-border"
           : "bg-transparent"
       }`}
@@ -38,6 +40,7 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <a
           href="#"
+          aria-label="Min Khant Kyaw — back to top"
           className="text-lg font-semibold tracking-tight text-foreground"
         >
           mk<span className="text-muted-foreground">.</span>
@@ -58,11 +61,11 @@ export function Navbar() {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
               className="ml-2"
               aria-label="Toggle theme"
             >
-              {theme === "dark" ? (
+              {resolvedTheme === "dark" ? (
                 <Sun className="h-4 w-4" />
               ) : (
                 <Moon className="h-4 w-4" />
@@ -77,10 +80,10 @@ export function Navbar() {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
               aria-label="Toggle theme"
             >
-              {theme === "dark" ? (
+              {resolvedTheme === "dark" ? (
                 <Sun className="h-4 w-4" />
               ) : (
                 <Moon className="h-4 w-4" />
@@ -88,10 +91,13 @@ export function Navbar() {
             </Button>
           )}
           <Button
+            ref={menuButtonRef}
             variant="ghost"
             size="icon"
-            onClick={() => setMobileOpen(!mobileOpen)}
+            onClick={() => setMobileOpen((open) => !open)}
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
           >
             {mobileOpen ? (
               <X className="h-4 w-4" />
@@ -103,20 +109,36 @@ export function Navbar() {
       </nav>
 
       {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="border-b border-border bg-background/95 backdrop-blur-md px-6 pb-4 md:hidden">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {link.label}
-            </a>
-          ))}
+      <div
+        id="mobile-menu"
+        aria-hidden={!mobileOpen}
+        inert={!mobileOpen}
+        onKeyDown={(event) => {
+          if (event.key === "Escape") {
+            setMobileOpen(false);
+            menuButtonRef.current?.focus();
+          }
+        }}
+        className={cn(
+          "grid transition-[grid-template-rows,opacity] duration-250 ease-out motion-reduce:transition-none md:hidden",
+          mobileOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        )}
+      >
+        <div className="min-h-0 overflow-hidden">
+          <div className="border-b border-border bg-background/95 px-6 pb-4 backdrop-blur-md">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }

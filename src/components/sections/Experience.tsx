@@ -21,7 +21,7 @@ export function Experience() {
               <div>
                 <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
                   <div>
-                    <h3 className="text-sm font-semibold text-foreground">
+                    <h3 className="text-base leading-snug font-semibold text-foreground">
                       {exp.role}
                     </h3>
                     <p className="text-sm text-muted-foreground">{exp.company}</p>
@@ -30,7 +30,7 @@ export function Experience() {
                     {exp.period}
                   </span>
                 </div>
-                <p className="mt-2 text-sm leading-relaxed text-foreground/80">
+                <p className="mt-2 text-sm leading-relaxed text-body-foreground">
                   {exp.description}
                 </p>
                 <div className="mt-2 flex flex-wrap gap-1.5">

@@ -6,6 +6,9 @@ import { Skills } from "@/components/sections/Skills";
 import { Projects } from "@/components/sections/Projects";
 import { Experience } from "@/components/sections/Experience";
 import { Contact } from "@/components/sections/Contact";
+import { Hobbies } from "@/components/sections/Hobbies";
+import { Research } from "@/components/sections/Research";
+import data from "@/data/data.json";
 
 export default function Home() {
   return (
@@ -15,9 +18,11 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
-        <Skills />
         <Projects />
+        <Research />
+        <Skills />
         <News />
+        <Hobbies hobbies={data.hobbies} />
         <Contact />
       </main>
     </>

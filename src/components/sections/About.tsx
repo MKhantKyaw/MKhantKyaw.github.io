@@ -16,7 +16,7 @@ export function About() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <p className="text-sm leading-relaxed text-foreground/80">
+          <p className="text-sm leading-relaxed text-body-foreground">
             {personal.bio}
           </p>
         </FadeIn>

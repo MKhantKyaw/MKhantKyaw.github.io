@@ -7,6 +7,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-body-foreground: var(--body-foreground);
+  --color-description-foreground: var(--description-foreground);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-inter);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -51,6 +53,8 @@
   --radius: 0.625rem;
   --background: oklch(0.98 0.01 80);
   --foreground: oklch(0.145 0 0);
+  --body-foreground: oklch(0.30 0 0);
+  --description-foreground: oklch(0.36 0 0);
   --card: oklch(0.98 0.01 80);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(0.98 0.01 80);
@@ -60,7 +64,7 @@
   --secondary: oklch(0.965 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.965 0 0);
-  --muted-foreground: oklch(0.44 0 0);
+  --muted-foreground: oklch(0.36 0 0);
   --accent: oklch(0.965 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
@@ -85,6 +89,8 @@
 .dark {
   --background: oklch(0.12 0 0);
   --foreground: oklch(0.985 0 0);
+  --body-foreground: color-mix(in oklab, var(--foreground) 80%, transparent);
+  --description-foreground: color-mix(in oklab, var(--foreground) 70%, transparent);
   --card: oklch(0.16 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.16 0 0);
@@ -118,6 +124,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 @layer base {

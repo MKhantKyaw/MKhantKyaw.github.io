@@ -1,8 +1,10 @@
 import Image from "next/image";
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Download, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import data from "@/data/data.json";
+
+const profileLinkClassName =
+  "inline-flex h-8.5 shrink-0 items-center justify-center gap-2 rounded-sm border border-foreground/15 bg-background text-xs font-medium text-muted-foreground transition-all duration-150 hover:-translate-y-px hover:border-foreground hover:bg-foreground hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-0 motion-reduce:transform-none motion-reduce:transition-none";
 
 export function Hero() {
   const { personal } = data;
@@ -13,7 +15,7 @@ export function Hero() {
         <FadeIn>
           <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
             <Image
-              src="/images/profile.png"
+              src="/images/photo.jpg"
               alt={personal.name}
               width={96}
               height={96}
@@ -27,7 +29,7 @@ export function Hero() {
               <p className="mt-1 text-lg font-medium text-muted-foreground">
                 {personal.title}
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/80 max-w-xl">
+              <p className="mt-3 text-sm leading-relaxed text-body-foreground max-w-xl">
                 {personal.tagline}
               </p>
               <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted-foreground sm:justify-start">
@@ -43,19 +45,17 @@ export function Hero() {
                   {personal.email}
                 </a>
               </div>
-              <div className="mt-5 flex items-center justify-center gap-3 sm:justify-start">
-                <Button size="sm" asChild>
-                  <a href="#contact">Get in Touch</a>
-                </Button>
+              <div className="mt-5 flex flex-wrap items-center justify-center gap-2 sm:justify-start sm:gap-3">
                 {personal.socials.github && (
                   <a
                     href={personal.socials.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-md border border-border p-2 text-muted-foreground transition-colors hover:text-foreground hover:border-foreground/20"
+                    className={`${profileLinkClassName} w-8.5`}
                     aria-label="GitHub"
+                    title="GitHub"
                   >
-                    <Github className="h-4 w-4" />
+                    <Github className="size-4" aria-hidden="true" />
                   </a>
                 )}
                 {personal.socials.linkedin && (
@@ -63,10 +63,23 @@ export function Hero() {
                     href={personal.socials.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-md border border-border p-2 text-muted-foreground transition-colors hover:text-foreground hover:border-foreground/20"
+                    className={`${profileLinkClassName} w-8.5`}
                     aria-label="LinkedIn"
+                    title="LinkedIn"
                   >
-                    <Linkedin className="h-4 w-4" />
+                    <Linkedin className="size-4" aria-hidden="true" />
+                  </a>
+                )}
+                {personal.resumeUrl && (
+                  <a
+                    href={personal.resumeUrl}
+                    download="Min-Khant-Kyaw-CV.pdf"
+                    aria-label="Download CV"
+                    title="Download CV"
+                    className={`${profileLinkClassName} px-2`}
+                  >
+                    <Download className="size-4" aria-hidden="true" />
+                    CV
                   </a>
                 )}
               </div>

@@ -11,9 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Min Khant Kyaw — Full Stack Developer",
+  title: "Min Khant Kyaw | Software Engineer in Ireland",
   description:
-    "Portfolio of Min Khant Kyaw, a full-stack developer building intelligent, scalable products with AI and modern web technologies.",
+    "Explore Min Khant Kyaw's work in React, Next.js, TypeScript and AI-powered products. Software engineer based in Ireland with 4+ years of experience.",
   keywords: [
     "full stack developer",
     "web developer",

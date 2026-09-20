@@ -32,7 +32,7 @@ export function Projects() {
                     <h3 className="text-sm font-semibold text-foreground">
                       {project.title}
                     </h3>
-                    <p className="mt-1 text-xs leading-relaxed text-foreground/70">
+                    <p className="mt-1 text-xs leading-relaxed text-description-foreground">
                       {project.description}
                     </p>
                     <div className="mt-2 flex flex-wrap gap-1.5">

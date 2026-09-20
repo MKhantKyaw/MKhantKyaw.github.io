@@ -36,7 +36,7 @@ export function News() {
                 <span className="text-xs font-medium text-muted-foreground leading-relaxed pt-0.5">
                   {item.date}
                 </span>
-                <p className="text-sm text-foreground/80 leading-relaxed">
+                <p className="text-sm text-body-foreground leading-relaxed">
                   {item.event}
                 </p>
               </div>
@@ -58,7 +58,7 @@ export function News() {
                     <span className="text-xs font-medium text-muted-foreground leading-relaxed pt-0.5">
                       {item.date}
                     </span>
-                    <p className="text-sm text-foreground/80 leading-relaxed">
+                    <p className="text-sm text-body-foreground leading-relaxed">
                       {item.event}
                     </p>
                   </div>
